@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>아이돌♡인플루언서, 열애설? 그 주인공은 바로 ‘이 사람’ - GDispatch</title>
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="GDispatch" />
+  <meta property="og:title" content="아이돌♡인플루언서, 열애설? 그 주인공은 바로 ‘이 사람’" />
+  <meta property="og:description" content="연예계가 또 한 번 발칵 뒤집혔다. 인기 남자 아이돌 그룹의 멤버 A군이 유명 여성 인플루언서 B씨와 함께 있는 모습이 포착돼 온라인상에서 뜨거운 관심을 받고 있다." />
+  <meta property="og:image" content="https://kaylaan29.github.io/gdispatch/photo1.PNG" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+      background-color: #f4f5f7;
+      color: #111111;
+      line-height: 1.6;
+    }
+    .app-container {
+      max-width: 480px;
+      margin: 0 auto;
+      background-color: #ffffff;
+      min-height: 100vh;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
+    }
+
+    /* 상단 헤더 */
+    .top-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 52px;
+      padding: 0 16px;
+      border-bottom: 1px solid #eeeeee;
+      background: #ffffff;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .icon-btn {
+      background: none;
+      border: none;
+      padding: 4px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #222222;
+    }
+    .brand-logo {
+      font-family: Georgia, "Times New Roman", serif;
+      font-style: italic;
+      font-weight: 900;
+      font-size: 25px;
+      letter-spacing: -0.8px;
+      color: #1992df;
+      text-decoration: none;
+      user-select: none;
+    }
+    .brand-logo .play-i {
+      position: relative;
+      display: inline-block;
+    }
+
+    /* 카테고리 내비게이션 */
+    .nav-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 18px;
+      height: 42px;
+      border-bottom: 1px solid #e8e8e8;
+      background: #ffffff;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+    .nav-item {
+      font-size: 14px;
+      font-weight: 600;
+      color: #555555;
+      text-decoration: none;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      position: relative;
+      padding: 0 4px;
+    }
+    .nav-item.active {
+      color: #1992df;
+      font-weight: 700;
+    }
+    .nav-item.active::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 2.5px;
+      background-color: #1992df;
+    }
+
+    /* 기사 헤더 */
+    .article-header {
+      padding: 20px 18px 16px;
+      border-bottom: 1px solid #eeeeee;
+    }
+    .category-badge {
+      display: inline-block;
+      font-size: 13px;
+      font-weight: 700;
+      color: #1992df;
+      margin-bottom: 8px;
+    }
+    .article-title {
+      font-size: 22px;
+      font-weight: 800;
+      line-height: 1.36;
+      letter-spacing: -0.5px;
+      color: #111111;
+      margin-bottom: 16px;
+      word-break: keep-all;
+    }
+    .meta-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .reporter-box {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    /* 카톡 기본 프로필 느낌 아바타 */
+    .kakao-avatar {
+      width: 38px;
+      height: 38px;
+      border-radius: 14px;
+      background-color: #b5cfe0;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+    .kakao-avatar svg {
+      width: 30px;
+      height: 30px;
+      fill: #eef5f9;
+    }
+    .reporter-info {
+      display: flex;
+      flex-direction: column;
+    }
+    .reporter-name {
+      font-size: 13.5px;
+      font-weight: 700;
+      color: #222222;
+      line-height: 1.3;
+    }
+    .article-date {
+      font-size: 12px;
+      color: #888888;
+      margin-top: 2px;
+    }
+    .tool-btns {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .tool-btn {
+      height: 30px;
+      padding: 0 9px;
+      border: 1px solid #dddddd;
+      border-radius: 15px;
+      background: #ffffff;
+      font-size: 12px;
+      font-weight: 600;
+      color: #444444;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .tool-btn:active {
+      background: #f2f2f2;
+    }
+
+    /* 기사 본문 */
+    .article-body {
+      padding: 20px 18px 28px;
+      font-size: 16.5px;
+      line-height: 1.78;
+      color: #222222;
+      letter-spacing: -0.2px;
+      word-break: keep-all;
+    }
+    .article-body p {
+      margin-bottom: 20px;
+    }
+
+    /* 사진 영역 */
+    .photo-figure {
+      margin: 6px 0 24px;
+    }
+    .photo-top-caption {
+      font-size: 13px;
+      color: #555555;
+      margin-bottom: 6px;
+      font-weight: 500;
+    }
+    .photo-wrapper {
+      position: relative;
+      width: 100%;
+      background-color: #f7f7f7;
+      overflow: hidden;
+      border-radius: 2px;
+    }
+    .photo-wrapper img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .photo-watermark {
+      position: absolute;
+      right: 10px;
+      bottom: 8px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-style: italic;
+      font-weight: 900;
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.85);
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.55);
+      pointer-events: none;
+      user-select: none;
+    }
+    .photo-caption {
+      font-size: 12.5px;
+      line-height: 1.5;
+      color: #777777;
+      margin-top: 8px;
+      padding-left: 2px;
+    }
+
+    /* 하단 바이라인 및 리액션 */
+    .article-footer {
+      padding: 0 18px 36px;
+    }
+    .byline-end {
+      font-size: 13px;
+      color: #666666;
+      padding-top: 14px;
+      border-top: 1px solid #eeeeee;
+      margin-bottom: 22px;
+    }
+    .copyright {
+      font-size: 11.5px;
+      color: #999999;
+      margin-top: 4px;
+    }
+    .reaction-box {
+      display: flex;
+      justify-content: space-between;
+      gap: 6px;
+      padding: 16px 8px;
+      border: 1px solid #eeeeee;
+      border-radius: 10px;
+      background: #fafafa;
+    }
+    .reaction-item {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px 0;
+    }
+    .reaction-emoji {
+      font-size: 22px;
+      margin-bottom: 4px;
+      transition: transform 0.15s ease;
+    }
+    .reaction-item:active .reaction-emoji {
+      transform: scale(1.25);
+    }
+    .reaction-label {
+      font-size: 11px;
+      color: #666666;
+      margin-bottom: 2px;
+    }
+    .reaction-count {
+      font-size: 12px;
+      font-weight: 700;
+      color: #222222;
+    }
+    .reaction-item.liked .reaction-count {
+      color: #1992df;
+    }
+
+    /* 공유 알림 토스트 */
+    .toast {
+      position: fixed;
+      bottom: 28px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(20, 20, 20, 0.88);
+      color: #ffffff;
+      font-size: 13px;
+      padding: 10px 18px;
+      border-radius: 20px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.25s ease;
+      z-index: 999;
+      white-space: nowrap;
+    }
+    .toast.show {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <div class="app-container">
+    <!-- 상단 로고 바 -->
+    <header class="top-header">
+      <button class="icon-btn" aria-label="메뉴">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+      <a href="#" class="brand-logo">GDispatch</a>
+      <button class="icon-btn" aria-label="검색">
+        <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+          <circle cx="11" cy="11" r="7.5"></circle>
+          <line x1="16.8" y1="16.8" x2="21" y2="21"></line>
+        </svg>
+      </button>
+    </header>
+
+    <!-- 카테고리 탭 -->
+    <nav class="nav-bar">
+      <a href="#" class="nav-item">홈</a>
+      <a href="#" class="nav-item active">연예</a>
+      <a href="#" class="nav-item">패션·뷰티</a>
+      <a href="#" class="nav-item">포토</a>
+      <a href="#" class="nav-item">영상</a>
+    </nav>
+
+    <!-- 기사 제목 및 기자 정보 -->
+    <section class="article-header">
+      <span class="category-badge">연예</span>
+      <h1 class="article-title">아이돌♡인플루언서, 열애설? 그 주인공은 바로 ‘이 사람’</h1>
+
+      <div class="meta-row">
+        <div class="reporter-box">
+          <div class="kakao-avatar" aria-hidden="true">
+            <svg viewBox="0 0 36 36">
+              <circle cx="18" cy="13" r="6.5" />
+              <path d="M6 33c0-6.6 5.4-11 12-11s12 4.4 12 11H6z" />
+            </svg>
+          </div>
+          <div class="reporter-info">
+            <span class="reporter-name">안채희 기자</span>
+            <span class="article-date">입력 2026.11.13. 00:00</span>
+          </div>
+        </div>
+
+        <div class="tool-btns">
+          <button class="tool-btn" onclick="changeFontSize(-1)">가-</button>
+          <button class="tool-btn" onclick="changeFontSize(1)">가+</button>
+          <button class="tool-btn" onclick="copyLink()" aria-label="공유">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="18" cy="5" r="3"></circle>
+              <circle cx="6" cy="12" r="3"></circle>
+              <circle cx="18" cy="19" r="3"></circle>
+              <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+              <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 기사 본문 -->
+    <article class="article-body" id="articleBody">
+      <!-- 첫 번째 메인 사진 -->
+      <figure class="photo-figure">
+        <div class="photo-top-caption">온라인 커뮤니티에 확산된 A군과 B씨의 사진</div>
+        <div class="photo-wrapper">
+          <img src="photo1.PNG" alt="온라인 커뮤니티에 확산된 A군과 B씨의 사진" />
+          <span class="photo-watermark">GDispatch</span>
+        </div>
+        <figcaption class="photo-caption">[사진=온라인 커뮤니티]</figcaption>
+      </figure>
+
+      <p>연예계가 또 한 번 발칵 뒤집혔다.</p>
+
+      <p>인기 남자 아이돌 그룹의 멤버 A군이 유명 여성 인플루언서 B씨와 함께 있는 모습이 포착돼 온라인상에서 뜨거운 관심을 받고 있다.</p>
+
+      <p>최근 각종 온라인 커뮤니티와 SNS를 중심으로 두 사람이 함께 촬영한 것으로 추정되는 사진이 확산되고 있다. 공개된 사진 속 두 사람은 다정한 분위기를 풍기고 있어 보는 이들의 궁금증을 자아낸다.</p>
+
+      <p>특히 눈길을 끄는 것은 두 사람의 자연스러운 거리감이다. 단순한 지인 사이라고 보기에는 어딘가 묘한 분위기가 느껴진다는 반응도 이어지고 있다.</p>
+
+      <!-- 두 번째 삽입 사진 -->
+      <figure class="photo-figure">
+        <div class="photo-wrapper">
+          <img src="photo2.JPG" alt="B씨의 비공개 SNS 계정 게시물" />
+          <span class="photo-watermark">GDispatch</span>
+        </div>
+        <figcaption class="photo-caption">B씨의 비공개 SNS 계정 게시물. 휴대전화 케이스 뒤편에 A군과 함께 촬영한 것으로 추정되는 네컷 사진이 포착됐다.</figcaption>
+      </figure>
+
+      <p>A군은 군 복무 이후 그룹과 솔로 활동을 넘나들며 두각을 드러내고 있다. 인플루언서 B씨는 최근 패션 앰버서더로 이름을 알렸으며, 미디어 업계에서 활발히 활동 중이다.</p>
+
+      <p>누리꾼들은 "이 조합 실화냐", "둘이 언제부터 만났냐", "사진 분위기가 심상치 않은데?" 등의 반응을 보이고 있다.</p>
+
+      <p>과연 두 사람은 정말 연인 사이일까? 아니면 우연히 함께한 지인 사이일까?</p>
+
+      <p>한편, A군 측 소속사는 아직 별다른 입장을 밝히지 않은 상태다.</p>
+    </article>
+
+    <!-- 기사 하단 -->
+    <footer class="article-footer">
+      <div class="byline-end">
+        <div>안채희 기자 (chaehui@gdispatch.co.kr)</div>
+        <div class="copyright">&lt;저작권자 © GDispatch, 무단 전재 및 재배포 금지&gt;</div>
+      </div>
+
+      <div class="reaction-box">
+        <button class="reaction-item" onclick="toggleReaction(this)">
+          <span class="reaction-emoji">😲</span>
+          <span class="reaction-label">놀랐어요</span>
+          <span class="reaction-count">412</span>
+        </button>
+        <button class="reaction-item" onclick="toggleReaction(this)">
+          <span class="reaction-emoji">😍</span>
+          <span class="reaction-label">설레요</span>
+          <span class="reaction-count">289</span>
+        </button>
+        <button class="reaction-item" onclick="toggleReaction(this)">
+          <span class="reaction-emoji">🤔</span>
+          <span class="reaction-label">후속원해요</span>
+          <span class="reaction-count">534</span>
+        </button>
+        <button class="reaction-item" onclick="toggleReaction(this)">
+          <span class="reaction-emoji">👏</span>
+          <span class="reaction-label">응원해요</span>
+          <span class="reaction-count">198</span>
+        </button>
+      </div>
+    </footer>
+  </div>
+
+  <div class="toast" id="toast">기사 링크가 복사되었습니다.</div>
+
+  <script>
+    let currentSize = 16.5;
+    function changeFontSize(delta) {
+      currentSize = Math.min(21, Math.max(14, currentSize + delta * 1.5));
+      document.getElementById("articleBody").style.fontSize = currentSize + "px";
+    }
+
+    function toggleReaction(btn) {
+      const countEl = btn.querySelector(".reaction-count");
+      let count = parseInt(countEl.textContent, 10);
+      if (btn.classList.contains("liked")) {
+        btn.classList.remove("liked");
+        countEl.textContent = count - 1;
+      } else {
+        btn.classList.add("liked");
+        countEl.textContent = count + 1;
+      }
+    }
+
+    function copyLink() {
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(window.location.href);
+      }
+      const toast = document.getElementById("toast");
+      toast.classList.add("show");
+      setTimeout(() => toast.classList.remove("show"), 2000);
+    }
+  </script>
+</body>
+</html>
